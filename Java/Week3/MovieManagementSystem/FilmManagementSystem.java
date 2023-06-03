@@ -45,6 +45,8 @@ public class FilmManagementSystem {
             System.out.println(filmName + " is bought successfully");
         } else {
             System.out.println("Something went wrong!");
+            username.setRequest();
+            username.requested.add(filmName);
         }
     }
 
