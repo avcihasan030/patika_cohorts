@@ -31,9 +31,9 @@ public class User {
         this.credit += amount;
     }
 
-    public void rentAFilm(Film film) {
-        if (film.isOnSale() && subscriber && credit >= film.getPrice()) {
-            this.credit -= film.getPrice();
+    public void hireAFilm(Film film) {
+        if (film.isOnSale() && subscriber && credit >= film.getPriceOfHiring()) {
+            this.credit -= film.getPriceOfHiring();
             System.out.println(film.getName() + " is successfully rented");
         } else {
             System.out.println(

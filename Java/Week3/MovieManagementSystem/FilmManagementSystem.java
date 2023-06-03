@@ -40,11 +40,21 @@ public class FilmManagementSystem {
             }
         }
 
-        if (buyedFilm != null && username.getCredits() >= buyedFilm.getPrice()) {
-            username.buyCredits((int) -buyedFilm.getPrice());
+        if (buyedFilm != null && username.getCredits() >= buyedFilm.getPriceOfBuying()) {
+            username.buyCredits((int) -buyedFilm.getPriceOfBuying());
             System.out.println(filmName + " is bought successfully");
         } else {
             System.out.println("Something went wrong!");
         }
+    }
+
+    public void listMovies() {
+        for (Film film : filmList) {
+            System.out.println(film);
+        }
+    }
+
+    public void sortMovies() {
+        filmList.sort(null);
     }
 }

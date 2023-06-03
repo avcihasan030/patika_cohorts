@@ -3,25 +3,31 @@ package MovieManagementSystem;
 public class Film {
 
     private String filmName;
-    private double price;
+    private double priceOfBuying;
+    private double priceOfHiring;
     private boolean onSale;
 
-    public Film(String filmName, double price) {
+    public Film(String filmName, double priceOfBuying, double priceOfHiring) {
         this.filmName = filmName;
-        this.price = price;
+        this.priceOfBuying = priceOfBuying;
+        this.priceOfHiring = priceOfHiring;
         this.onSale = true;
     }
 
     public String getName() {
-        return filmName;
+        return this.filmName;
     }
 
-    public double getPrice() {
-        return price;
+    public double getPriceOfBuying() {
+        return this.priceOfBuying;
+    }
+
+    public double getPriceOfHiring() {
+        return this.priceOfHiring;
     }
 
     public boolean isOnSale() {
-        return onSale;
+        return this.onSale;
     }
 
     public void setIsOnSale(boolean onSale) {
