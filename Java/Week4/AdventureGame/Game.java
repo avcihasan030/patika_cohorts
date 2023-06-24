@@ -13,7 +13,7 @@ public class Game {
         System.out.println("Welome to this dark and foggy island, " + player.getName() + ".");
         System.out.println("Everything that happens here is real...");
         player.selectChar();
-        System.out.println("Seçilen karakter bilgileri: ");
+        System.out.println("Selected warrior info: ");
         System.out.println("name: " + player.getName() +
                 "\t damage : " + player.getDamage() + "\t health: " + player.getHealth() + "\t coin: "
                 + player.getCoin());

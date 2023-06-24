@@ -36,7 +36,7 @@ public class Player {
     }
 
     public void selectLocation() {
-
+          
     }
 
     public Inventory getInventory() {
