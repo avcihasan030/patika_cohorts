@@ -21,15 +21,20 @@ public class Game {
         Location location = null;
 
         while (true) {
+            player.playerInfo();
             System.out.println();
             System.out.println("########## Locations ##########");
             System.out.println();
             System.out.println("1- Safe House ->  this is a safe house for you,there are no enemies here.");
             System.out.println("2- Tool Store -> You can buy weapons or armors");
+            System.out.println("0 - EXIT -> Terminate the game");
             System.out.print("Select the location that you want to go: \n-> ");
             int _selectLocation = scan.nextInt();
 
             switch (_selectLocation) {
+                case 0:
+                    location = null;
+                    break;
                 case 1:
                     location = new SafeHouse(player);
                     break;
@@ -38,6 +43,11 @@ public class Game {
                     break;
                 default:
                     location = new SafeHouse(player);
+            }
+
+            if (location == null) {
+                System.out.println("You quickly gave up on this dark and foggy island...");
+                return;
             }
             if (!location.onLocation()) {
                 System.out.println("GAME OVER");

@@ -3,7 +3,7 @@ package AdventureGame;
 import java.util.Scanner;
 
 public class Player {
-    Inventory inventory;
+    private Inventory inventory;
     private int damage;
     private int health;
     private int coin;
@@ -12,6 +12,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
+        this.inventory = new Inventory();
     }
 
     public void selectChar() {
@@ -35,8 +36,15 @@ public class Player {
         this.setName(warrior.getName());
     }
 
-    public void selectLocation() {
-          
+    public void playerInfo() {
+        System.out.println(
+                "Weapon: " + this.getInventory().getWeapon().getName() +
+                        "\nDamage: " + this.getDamage() +
+                        "\nArmor: " + this.getInventory().getArmor().getName() +
+                        "\nBlock " + this.getInventory().getArmor().getBlock() +
+                        "\nHealth: " + this.getHealth() +
+                        "\nCoins: " + this.getCoin());
+
     }
 
     public Inventory getInventory() {
@@ -48,7 +56,7 @@ public class Player {
     }
 
     public int getDamage() {
-        return damage;
+        return damage + this.getInventory().getWeapon().getDamage();
     }
 
     public void setDamage(int damage) {
