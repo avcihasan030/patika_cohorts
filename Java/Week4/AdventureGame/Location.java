@@ -6,6 +6,7 @@ public abstract class Location {
     private Player player;
     private String name;
     public static Scanner scan = new Scanner(System.in);
+    private final int howManyBattleLoc = 3;
 
     public Location(Player player, String name) {
         this.player = player;
@@ -28,6 +29,10 @@ public abstract class Location {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getHowManyBattleLoc(){
+        return howManyBattleLoc;
     }
 
 }

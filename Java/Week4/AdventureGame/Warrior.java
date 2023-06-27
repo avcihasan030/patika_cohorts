@@ -6,8 +6,9 @@ public abstract class Warrior {
     private int damage;
     private int health;
     private int coin;
+    private Inventory inventory;
 
-    public Warrior(String name,int id, int damage, int health, int coin) {
+    public Warrior(String name, int id, int damage, int health, int coin) {
         this.id = id;
         this.name = name;
         this.damage = damage;
@@ -53,6 +54,14 @@ public abstract class Warrior {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 
 }

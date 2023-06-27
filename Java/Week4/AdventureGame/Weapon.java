@@ -1,12 +1,13 @@
 package AdventureGame;
 
-public class Weapon {
+public class Weapon extends StoreItems{
     private int id;
     private String name;
     private int damage;
     private int price;
 
     public Weapon(int id, String name, int damage, int price) {
+        super(name,id,price);
         this.id = id;
         this.name = name;
         this.damage = damage;
@@ -61,6 +62,12 @@ public class Weapon {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public void printItemsInfo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'printItemsInfo'");
     }
 
 }
